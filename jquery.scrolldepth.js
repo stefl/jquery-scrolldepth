@@ -43,10 +43,10 @@
     function sendEvent(action, label, timing) {
       if (!options.testing) {
 
-        _gaq.push(['_trackEvent', 'Scroll Depth', action, label, 1, true]);
+        ga('send', 'event', 'Scroll Depth', action, label, 1, {'nonInteraction': 1});
 
         if (arguments.length > 2) {
-          _gaq.push(['_trackTiming', 'Scroll Depth', action, timing, label, 100]);
+          ga('send', 'timing', 'Scroll Depth', action, timing, label);
         }
 
       } else {
