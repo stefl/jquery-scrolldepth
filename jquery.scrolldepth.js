@@ -24,7 +24,7 @@
 
   $.scrollDepth = function(options) {
     
-    var startTime = +new Date;
+    var startTime = +new Date();
 
     options = $.extend({}, defaults, options);
 
@@ -107,7 +107,7 @@
         marks = calculateMarks(docHeight),
 
         // Timing
-        timing = +new Date - startTime;
+        timing = +new Date() - startTime;
 
       // If all marks already hit, unbind scroll event
       if (cache.length >= 4 + options.elements.length) {
