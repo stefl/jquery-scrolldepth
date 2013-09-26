@@ -43,11 +43,11 @@
     function sendEvent(action, label, timing) {
       if (!options.testing) {
 
-        ga('send', 'event', 'Scroll Depth', action, label, 1, {'nonInteraction': 1});
-
-        if (arguments.length > 2) {
-          ga('send', 'timing', 'Scroll Depth', action, timing, label);
-        }
+        analytics.track('Scroll Depth', {
+          'action': action, 
+          'label': label, 
+          'timing': timing
+        });
 
       } else {
         $('#console').html(action + ': ' + label);
