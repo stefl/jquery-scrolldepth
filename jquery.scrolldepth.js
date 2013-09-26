@@ -89,6 +89,8 @@
      * Scroll Event
      */
 
+    $window.off('scroll.scrollDepth');
+
     $window.on('scroll.scrollDepth', function() {
 
       /*
